@@ -1,6 +1,39 @@
 h1 {
 padding: 20px; 
 color: black;
-background-color: red;
+background-color: beige;
 text-align: center;
+margin-right:auto;
+margin-left: auto;
+}
+
+.images {
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid gray; 
+    width: auto; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.images {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+img {
+    position: static;
+    height: 100px;
+    padding: 10px;
+    background-color: #81adc8;
 }
