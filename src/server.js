@@ -10,7 +10,9 @@ mongoose.connect(process.env.MONGO_URI);
 
 const restroomSchema = new mongoose.Schema({
   rating: Number,
-  review: String
+  lat: Number,
+  lng: Number,
+  review: String,
 });
 
 const Restroom = mongoose.model('Restroom', restroomSchema);
