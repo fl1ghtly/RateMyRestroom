@@ -11,10 +11,13 @@ margin-left: auto;
 /* Navigation Bar */
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: -15px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
     overflow: hidden;
-    background-color: navy;
+    background-color: orange;
 }
 /* anything with <li> will be on the left and a border with the color white */
 li {
@@ -35,9 +38,25 @@ li a {
 }
 /* color when you hover the navigation bar*/
 li a:hover {
-    background-color: black;
+    background-color: navy;
 }
 /* Colors the active page on navigation bar */
 .active {
-    background-color: orange;
+    background-color: darkblue;
+}
+
+/* Color of website page*/
+body {
+    background-color: #FAF9F6;
+}
+
+/* Bottom line */
+.bottom-line {
+    margin-top: 20px;
+    height: 2px;
+    background-color: navy;
+}
+
+.credit {
+    display:inline-block;
 }
