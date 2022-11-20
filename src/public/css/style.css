@@ -60,17 +60,6 @@ body {
 .credit {
     display:inline-block;
 }
-.ratingsystem
-{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: arial;
-    
-}
 .box
 {
     width: 250px;
@@ -117,3 +106,77 @@ p
 { 
     background: transparent;
 }
+input#rate5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+  }
+  #rate1:checked ~ form header:before{
+    content: "I just hate it ";
+  }
+  #rate2:checked ~ form header:before{
+    content: "I don't like it ";
+  }
+  #rate3:checked ~ form header:before{
+    content: "It is awesome ";
+  }
+  #rate4:checked ~ form header:before{
+    content: "I just like it ";
+  }
+  #rate5:checked ~ form header:before{
+    content: "I just love it ";
+  }
+  .container form{
+    display: none;
+  }
+  input:checked ~ form{
+    display: block;
+  }
+  form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+  form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+  }
+  .textarea textarea:focus{
+    border-color: #444;
+  }
+  form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+  }
+  form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form .btn button:hover{
+    background: #1b1b1b;
+  }

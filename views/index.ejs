@@ -48,11 +48,31 @@
                     infoWindow.open(map,marker);
                 });
                 */
-            addMarker({
-                coords:{ lat:37.320868, lng:-122.047968 },
-                content:'<h1> MLC Restroom </h1>' 
-                
-            });
+                addMarker({
+                    coords:{ lat:37.320868, lng:-122.047968 },
+                    content:'<h1>MLC restroom</h1>'+
+                            '<div class="ratingsystem">' + 
+                            '<div class = "box">' + 
+                            "<p>Rate the restroom</p>" + 
+                            '<div class = "rating">' + 
+                            '<input type = "radio" name = "rating" id = "rate5" onClick="reply_click(this.id)"><label for  = "rate5"></label></label>' + 
+                            '<input type = "radio" name = "rating" id = "rate4" onClick="reply_click(this.id)"><label for  = "rate4"></label></label>' + 
+                            '<input type = "radio" name = "rating" id = "rate3" onClick="reply_click(this.id)"><label for  = "rate3"></label></label>' + 
+                            '<input type = "radio" name = "rating" id = "rate2" onClick="reply_click(this.id)"><label for  = "rate2"></label></label>' + 
+                            '<input type = "radio" name = "rating" id = "rate1" onClick="reply_click(this.id)"><label for  = "rate1"></label></label>' +
+                            "</div>" + 
+                            "</div>" + 
+                            "</div>" +
+                            '<form action="#">'+
+                            '<header></header>' + 
+                            '<div class="textarea">' + 
+                            '<textarea cols="30" placeholder="Describe your experience.."></textarea>' +
+                            "</div>" +
+                            '<div class="btn">' + 
+                            '<button type="submit" onlick="submit()">Post</button>' + 
+                            "</div>" +
+                            '</form>' 
+                            });
             addMarker({
                 coords:{ lat:37.321975, lng:-122.046190},
                 content:'<h1> A1 Building Restrooms</h1>' 
