@@ -1,39 +1,62 @@
+/* Heading of Webiste */
 h1 {
 padding: 20px; 
-color: black;
-background-color: beige;
+color: white;
+background-color: navy;
 text-align: center;
-margin-right:auto;
+margin-right: auto;
 margin-left: auto;
 }
 
-.images {
-    justify-content: center;
-    padding: 30px;
-    border: 1px solid gray; 
-    width: auto; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/* Navigation Bar */
+ul {
+    list-style-type: none;
+    margin-top: -15px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: orange;
 }
-
-.images {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+/* anything with <li> will be on the left and a border with the color white */
+li {
+ float: left;
+ border-right: 3px solid white;
+}
+/* this puts the "About" section on the right with no border */
+li:last-child{
+    border-right: none;
+}
+/* Design of navigation bar */
+li a {
+    display:block;
+    padding: 14px 16px;
+    color:white;
+    text-decoration: none;
     text-align: center;
 }
+/* color when you hover the navigation bar*/
+li a:hover {
+    background-color: navy;
+}
+/* Colors the active page on navigation bar */
+.active {
+    background-color: darkblue;
+}
 
-img {
-    position: relative;
-    height: 100px;
-    padding: 10px;
-    background-color: #81adc8;
+/* Color of website page*/
+body {
+    background-color: #FAF9F6;
+}
+
+/* Bottom line */
+.bottom-line {
+    margin-top: 20px;
+    height: 2px;
+    background-color: navy;
+}
+
+.credit {
+    display:inline-block;
 }

@@ -5,34 +5,102 @@
 
 <head> <!-- Link to CSS Page, Remember to open style.css and html at the same time -->
     <title>RateMyRestroom</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./src/style.css"/>
+    <style>
+        #map{
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-    <!--
-        <% restList.forEach(room => { %>
-            <p><%=room.name%></p>
-        <% }) %>
-    -->
     <!-- title of website -->
     <h1>RateMyRestroom</h1>
 
-    <section> <!-- Map -->
-    <div class="images">
-        <button id ="restroom1" style='font-size:24px'>Button <i class='fas fa-restroom'></i><img src=""></button>
-        <img id="map" src="https://www.deanza.edu/fleamarket/images/campus-map-w-flea-market.jpg" >
-    </div>
-    </section>
-    
-    <section> <!-- Testing Buttons -->
 
-    </section>
-    <ul>
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="about.asp">About</a></li>
+
+    <!-- Navigation Bar-->
+    <!-- attach link to "default.asp" and "about.asp"-->
+    <ul>    
+        <li><a class="active" href="default.asp">Home</a></li>
+        <li style="float:right"><a href="about.asp">About</a></li>  
     </ul>
+
+    <div id="map"></div>
+    <script>
+        //creates the map image 
+        function initMap(){
+            var options = {
+                zoom: 17,
+                center: { lat:37.3193, lng:-122.0448}
+            }
+            var map = new google.maps.Map(document.getElementById("map"), options);
+            /*
+            const marker = new google.maps.Marker({
+             position: { lat:37.320868, lng:-122.047968 },
+             map: map,
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content:'<h1> MLC restroom </h1>'
+            });
+            marker.addListener('click',function(){
+                infoWindow.open(map,marker);
+            });
+            */
+           
+           addMarker({
+            coords:{ lat:37.320868, lng:-122.047968 },
+            content:'<h1> MLC Restroom </h1>' 
+                    
+           });
+           addMarker({
+            coords:{ lat:37.321975, lng:-122.046190},
+            content:'<h1> A1 Building Restrooms</h1>' 
+
+
+           });
+           //add a marker on the map
+           //use content
+           function addMarker(props){
+                const marker = new google.maps.Marker({
+                position:props.coords,
+                map: map,
+                });
+                if (props.content){
+                    var infoWindow = new google.maps.InfoWindow({
+                    content:props.content
+                    });
+                    marker.addListener('click',function(){
+                        infoWindow.open(map,marker);
+                    });
+                }
+           }
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXsIX0NFkiPp2Y9rnYIDxu1Lcw-JJDzBc&callback=initMap">
+        
+    </script>
+
+
+
+
+
+
+
+    
     </main>
+    <!-- This will be at the bottom of the website, upload your code above this-->
+    <hr class="bottom-line">    
+    <footer>
+        <p class="credit">Created by:</p>
+        <p class"credit"> Timothy Le</p>
+        <p class"credit"> James Nguyen</p>
+        <p class"credit"> Samuel Lo</p>
+        <p class"credit"> Brian Liu</p>
+    </footer>
 </body>
 
 </html>
