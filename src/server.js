@@ -7,7 +7,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect("mongodb+srv://owlhacks2022:THc5o2AcGBMw0WeX@cluster0.cbmpaol.mongodb.net/owlhacks2022?retryWrites=true&w=majority");
 
 const restroomSchema = new mongoose.Schema({
   rating: Number,
